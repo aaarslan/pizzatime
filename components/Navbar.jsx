@@ -1,6 +1,6 @@
 import styles from "../styles/Navbar.module.css"
 import Image from "next/image";
-
+import Link from "next/link";
 const Navbar = () => {
   return (
     <div className={styles.container}>
@@ -15,8 +15,8 @@ const Navbar = () => {
       </div>
       <div className={styles.item}>
         <ul className={styles.list}>
-          <li className={styles.listItem}><a href="/">Homepage</a></li>
-          <li className={styles.listItem} ><a href="/product/1">Products</a></li>
+          <li className={styles.listItem}><Link href="/">Homepage</Link></li>
+          <li className={styles.listItem} ><Link href="/product/1">Products</Link></li>
           <li className={styles.listItem}>Menu</li>
           <Image src='/img/logo.png' alt='' width="100px" height="100px" />
           <li className={styles.listItem}><a href="/orders/1">Orders</a></li>
@@ -26,7 +26,7 @@ const Navbar = () => {
       </div>
       <div className={styles.item}>
         <div className={styles.cart} >
-          <a href="/cart"><Image src="/img/cart.png" alt="" width="30px" height="30px"/></a>
+          <Link href="/cart"><Image src="/img/cart.png" alt="" width="30px" height="30px"/></Link>
           <div className={styles.counter}>2</div>
         </div>
       </div>
